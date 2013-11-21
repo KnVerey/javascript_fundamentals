@@ -27,7 +27,7 @@ var thisYear = 2013;
 var birthYear = 1985;
 var possibleAges = [(thisYear-birthYear), (thisYear-1-birthYear)];
 
-document.write("<p>They are either " + possibleAges[0] + " or " + possibleAges[1] + ".</p>");
+document.write("<p>They are either " + possibleAges[1] + " or " + possibleAges[0] + ".</p>");
 
 // EXERCISE: The Lifetime Supply Calculator
 
@@ -72,8 +72,8 @@ document.write("<p>The area is " + area + ".</p>");
 var celTemp = 35;
 var fahrTemp = 80;
 
-var cToF = (celTemp + 9/5 + 32).toFixed(2);
-var fToC = ((fahrTemp - 32)*5/9).toFixed(2);
+var cToF = Math.ceil(celTemp * 9/5 + 32);
+var fToC = Math.ceil((fahrTemp - 32)*5/9);
 
 document.write("<p>" + celTemp + " degrees C is " + cToF + " degrees F.</p>");
 document.write("<p>" + fahrTemp + " degrees F is " + fToC + " degrees C.</p>");
