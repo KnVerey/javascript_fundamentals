@@ -10,6 +10,9 @@
 // Find the Google search button and store it in a variable.
 // Modify the text of the button so that it says "Yahooo!" instead.
 
+document.getElementById('hplogo').setAttribute('style', 'background:url(http://digitalsherpa.com/wp-content/uploads/2013/09/yahoologo.jpg) no-repeat;background-size:269px 95px;height:95px;width:269px');
+document.getElementById('gbqfsa').innerText = "Yahoooo!";
+
 // EXERCISE: About Me
 
 // Cuz every webpage needs an "About" section.
