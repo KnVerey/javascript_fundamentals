@@ -1,0 +1,55 @@
+<!-- Create a webpage with an h1 of "My Book List".
+Add a script tag to the bottom of the page, where all your JS will go.
+Copy the array of books from the previous exercise.
+Iterate through the array of books. For each book, create a p element with the book title and author and append it to the page.
+Bonus: Use a ul and li to display the books.
+Bonus: add a property to each book with the URL of the book cover, and add an img element for each book on the page.
+Bonus: Change the style of the book depending on whether you have read it or not. -->
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>My book list</title>
+	</head>
+
+	<body>
+		<h1>My Book List</h1>
+		<script>
+					var readingList = [
+				{
+					title: "The Hobbit",
+					author: "J.R.R. Tolkein",
+					alreadyRead: false
+				},
+				{
+					title: "Lying",
+					author: "Sam Harris",
+					alreadyRead: true
+				},
+				{
+					title: "Nothing to Envy",
+					author: "(I don't remember)",
+					alreadyRead: true
+				},
+				{
+					title: "GEB",
+					author: "That Really Smart Guy",
+					alreadyRead: false
+				}
+			];
+
+			var body = document.getElementsByTagName('body')[0];
+			var list = document.createElement('ul');
+			for (var book = 0; book < readingList.length; book++) {
+				var item = document.createElement('li');
+				item.innerHTML = readingList[book].title + " by " + readingList[book].author;
+				readingList[book].alreadyRead ? item.style.color = 'green' : item.style.color = 'red';
+				list.appendChild(item);
+			}
+			body.appendChild(list);
+
+		</script>
+	</body>
+
+</html>
