@@ -112,24 +112,54 @@
 // Show the number of children in an alert
 // Hint: you can use .children, .length and alert or you could use .find, .size and alert. the alert should show 5
 
+// $(document).ready( function(){
+// 	alert($(".child").length);	
+// 	alert($("#target").children().filter("div").length);
+// });
+
 // EXERCISE: Animate
 
 // Make "#target" double size with animation
 // Hint: you can use .animate, .width, and .height
+
+// $(document).ready( function(){
+// 	var currH = $("#target")[0].style.height;
+// 	currH = +currH.slice(0, (currH.length-2));
+// 	var currW = $("#target")[0].style.width;
+// 	currW = +currW.slice(0, (currW.length-2));
+// 	$("#target").animate({width: currW*2, height: currH*2});
+// });
+
 
 // EXERCISE: Alternate Color
 
 // Make the list-box alternating. (Make odd options a different color)
 // Hint: you can select the option and use .filter and .css
 
+// $(document).ready(function(){
+// 	$("#target").find("option").filter(":odd").css({"background-color": "cornflowerblue"});
+// });
+
 // EXERCISE: All But One
 
 // Remove all children of "#target" but h2
 // Hint: you can use .children, .not and .remove
+
+// $(document).ready(function(){
+// 	$("#target").children().not("h2").remove();
+// });
 
 // EXERCISE: Without Children
 
 // Remove all 'div' whitch has no child elements.
 // Hint: you can use .not and .remove. Look closely at what options you can pass .not
 
+$(document).ready(function(){
+	function hasChildren() {
+		return $(this).children().length != 0;
+	}
+
+	$(".target").not(hasChildren).remove();
+
+});
 
